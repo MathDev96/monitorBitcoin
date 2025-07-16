@@ -52,5 +52,6 @@ Os valores são formatados no padrão brasileiro, com . como separador de milhar
 
 A contagem é incrementada a cada atualização, permitindo acompanhar o número de execuções.
 
-📄 Licença
+
+### 📄 Licença
 Este projeto está licenciado sob a licença MIT.
