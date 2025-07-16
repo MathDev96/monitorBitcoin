@@ -25,7 +25,8 @@ Se não estiver instalado, utilize:
 sudo apt update
 sudo apt install ruby-full
 
-🚀 Como executar
+🚀 Como executar:
+
 Clone este repositório ou crie um arquivo bitcoin.rb com o código do projeto.
 
 No terminal, execute o script com:
