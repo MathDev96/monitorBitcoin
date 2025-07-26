@@ -1,64 +1,58 @@
 # 📈 Monitor de Preço do Bitcoin (Ruby)
 
-Projeto simples em Ruby que exibe o preço atual do Bitcoin em **dólares (USD)** e **reais (BRL)** a cada 10 segundos, consumindo a API pública da [CoinGecko](https://www.coingecko.com/).  
-Agora com:
-
-✅ **Contador de atualizações**  
-✅ **Cores no terminal** usando a gem `colorize`  
-✅ Compatível com **Windows e Linux**
+Projeto simples em Ruby que exibe o preço atual do Bitcoin em **dólares (USD)** e **reais (BRL)** a cada 10 segundos, consumindo a API pública da CoinGecko.  
+Agora com **contador de atualizações** exibido no terminal.
 
 ---
 
 ## 🛠️ Tecnologias Usadas
 
 - Ruby
-- Gem: [`colorize`](https://github.com/fazibear/colorize) (estilização do terminal)
 - Bibliotecas nativas: `net/http` e `json`
-- API pública da CoinGecko
-- Ambientes testados: Ubuntu (WSL) e Windows (CMD / PowerShell)
+- API pública da [CoinGecko](https://www.coingecko.com/)
+- Ambiente: Ubuntu + VS Code
 
 ---
 
 ## ✅ Pré-requisitos
 
 Tenha o Ruby instalado no seu sistema:
-ruby -v (Para verificar)
 
-🚀 Como executar
+ruby -v
 
-Clone este repositório ou crie um arquivo monitorBitcoin.rb com o código do projeto.
+Se não estiver instalado, utilize:
 
-No terminal, dentro da pasta do projeto, execute:
+sudo apt update
+sudo apt install ruby-full
 
-ruby monitorBitcoin.rb
+🚀 Como executar:
 
-💻 Exemplo da saída no terminal:
-==============================
-  MONITOR DE BITCOIN - v3
-==============================
-💵 Dólar: $64.512,88
-🇧🇷 Real:  R$348.212,33
-⏰ Atualizado em: 26/07/2025 08:24:12
+Clone este repositório ou crie um arquivo bitcoin.rb com o código do projeto.
+
+No terminal, execute o script com:
+
+ruby bitcoin.rb
+
+A cada 10 segundos, será exibida uma saída parecida com:
+
+- Dólar: $118.869,00
+- Real: R$661.447,00
+------------------------------
+[2] Preço atual do Bitcoin:
+- Dólar: $118.869,00
+- Real: R$661.447,00
 ------------------------------
 
-A cada 10 segundos, o terminal é limpo e os dados são atualizados automaticamente.
+📌 Detalhes do funcionamento
 
-🔍 Detalhes do funcionamento:
+O programa utiliza net/http para consumir a API da CoinGecko.
 
-Os dados são consumidos via net/http da API da CoinGecko.
+Os preços são extraídos do JSON retornado e apresentados em reais e dólares.
 
-O JSON retornado é parseado para extrair os valores atuais em USD e BRL.
+Os valores são formatados no padrão brasileiro, com . como separador de milhar e , como separador decimal.
 
-Os valores são formatados no padrão brasileiro:
+A contagem é incrementada a cada atualização, permitindo acompanhar o número de execuções.
 
-Separador de milhar: .
 
-Separador decimal: ,
-
-O terminal é colorido com a gem colorize.
-
-Um contador é exibido indicando quantas atualizações já foram feitas (v1, v2, v3...).
-
-📄 Licença
+### 📄 Licença
 Este projeto está licenciado sob a licença MIT.
-
