@@ -12,9 +12,9 @@ class Bitcoin
     usd = format_price(price_data['usd'])
     brl = format_price(price_data['brl'])
 
-    puts "==============================".green
+    puts "=============================".green
     puts "  MONITOR DE BITCOIN - v#{count}".yellow
-    puts "==============================".green
+    puts "=============================".green
     puts "💵 Dólar: ".light_blue + "$#{usd}".white
     puts "🇧🇷 Real:  ".light_blue + "R$#{brl}".white
     puts "⏰ Atualizado em: #{Time.now.strftime('%d/%m/%Y %H:%M:%S')}".gray
