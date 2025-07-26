@@ -23,6 +23,7 @@ ruby -v
 Se não estiver instalado, utilize:
 
 sudo apt update
+
 sudo apt install ruby-full
 
 🚀 Como executar:
